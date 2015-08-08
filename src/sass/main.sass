@@ -1,0 +1,387 @@
+body
+	font-family: "Arial", sans-serif
+	font-weight: 400
+	background-color: #121212
+	background-image: url(../img/body-bg.png)
+	background-repeat: no-repeat
+	background-position: 50% 0
+.wrapper
+	max-width: 980px
+	margin: 0 auto
+	padding: 0 20px
+	background-color: white
+	+cf
+
+.header
+	.wrapper
+		margin-top: 45px
+		padding-top: 15px
+	&__topline
+		min-height: 63px
+		position: relative
+	+cf
+	&__logo
+		float: left
+		margin-top: 12px
+	&__nav
+		left: 343px
+		position: absolute
+		bottom: 8px
+		li
+			display: inline-block
+			margin-right: 10px
+			border-right: 1px solid #202021
+			&:last-child
+				border-right: 0
+		a
+			display: block
+			text-decoration: none
+			font-size: 12px
+			font-weight: 400
+			color: #CF0000
+			padding-right: 10px
+	&__right
+		float: right
+
+	
+	&__search-wrapper
+		position: absolute
+		bottom: 4px
+		right: 0
+	&__search
+		width: 217px
+		background-color: #f8f8f8
+		height: 26px
+		border: 1px solid #bababa
+		position: relative
+		bottom: -1px
+	&__search-button
+		width: 32px
+		height: 26px
+		display: inline-block
+		position: relative
+		left: -3px
+		background-color: #202021
+	&__social a
+		display: inline-block
+		margin-right: 9px
+		&:last-child
+			margin-right: 0
+	@each $s in twitter,facebook,rss,fb-like,google-like,search
+		&__icon-#{$s}
+			@extend .icon-#{$s}
+			display: inline-block
+			vertical-align: middle
+			text-align-last: auto
+	&__main-nav
+		background-image: linear-gradient(to top, #000 0%, #1B1D1E 100%)
+		min-height: 45px
+		margin-top: 17px
+		li
+			display: inline-block
+			margin-right: 31px
+			padding-top: 10px
+			&:first-child
+				margin-left: 33px
+			&:last-child
+				margin-right: 0
+		a
+			color: #FFF
+			font-family: "Bebas-Regular"
+			font-size: 15px
+			text-decoration: none
+			text-transform: uppercase
+
+%title
+	color: #202021
+	font-family: "Bebas-Regular"
+	font-size: 20px
+	font-weight: 400
+	text-transform: uppercase
+//main part
+.main
+	+cf
+	&__l-col
+		width: 670px
+		float: left
+	&__r-col
+		width: 260px
+		float: right
+	&__more
+		width: 61px
+		height: 18px
+		background-color: #cf0000
+		position: absolute
+		right: 0
+		top: -18px
+		i
+			display: inline-block
+			@extend .icon-plus
+			+ca
+	&__red
+		width: 100%
+		background-color: #cf0000
+		height: 3px
+		margin-bottom: 15px
+		position: relative
+	&__breaking
+		padding: 13px 11px
+		background-color: #202021
+		position: relative
+		margin-top: 5px
+		margin-bottom: 27px
+		+cf
+	&__breaking-heading
+		left: 0
+		right: 0
+		bottom: 0
+		color: #FFF
+		font-size: 15px
+		font-weight: 400
+		width: 526px
+		height: 40px
+		background-color: rgba(0,0,0,0.6)
+		position: relative
+		bottom: 47px
+	&__breaking-btn
+		@extend .icon-breaking
+		background-color: #cf0000
+	&__breaking-news
+		position: absolute
+		bottom: 0
+		left: 0
+	&__sub
+		float: right
+	&__big
+		position: absolute
+	&__title-text
+		position: relative
+		left: 150px
+		width: 300px
+		font-size: 15px
+		padding-top: 6px
+	&__lcol-1
+		width: 458px
+		float: left
+	&__lcol-2
+		width: 190px
+		float: right
+	&__videos
+		padding: 10px 25px 0 20px
+		position: relative
+		background-color: #e4e4e4
+		margin-top: 5px
+		min-height: 315px
+		&-tile
+			+cf
+			margin-bottom: 15px
+		&-pic
+			display: inline-block
+			float: left
+			vertical-align: middle
+			position: relative
+			left: 10px
+		&-text
+			display: inline-block
+			float: right
+			width: 125px
+	&__more-videos
+		@extend .main__more
+		top: 297px
+
+	&__advertise
+		margin-top: 20px
+		margin-bottom: 20px
+		text-align: center
+	&__form
+		background-color: #e4e4e4
+		text-align: center
+		padding: 15px 20px 25px
+		&-title
+			color: #202021
+			font-family: "Bebas-Regular"
+			font-size: 20px
+			font-weight: 400
+			margin-bottom: 10px
+			text-transform: uppercase
+		&-subtitle
+			color: #202021
+			font-size: 12px
+			font-weight: 400
+			margin-bottom: 10px
+		&-submit
+			width: 101px
+			background-color: #cf0000
+			display: block
+			height: 26px
+			color: #FFF
+			font-size: 13px
+			font-weight: 700
+			text-transform: uppercase
+			position: relative
+			left: 9px
+		input
+			text-indent: 5px
+			width: 205px
+			height: 26px
+			background-color: #F8F8F8
+			border: 1px solid #BABABA
+			margin-bottom: 10px
+			+placeholder
+				color: black
+	&__spam
+		color: #CF0000
+		font-size: 12px
+		font-weight: 400
+		margin-top: 15px
+	&__around-title,&__articles-title,&__gallery-title, &__tech-title,&__desk-title,&__editorial-title
+		@extend %title
+	&__around-wrapper
+		+cf
+	&__around-tile
+		width: 146px
+		float: left
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+	&__gallery-tile
+		display: inline-block
+	&__articles
+		margin-top: 32px
+		margin-bottom: 269px
+	&__articles-tile
+		@extend .main__around-tile
+	&__editorial
+		position: relative
+		top: 32px
+		a
+			text-decoration: none
+			color: #CF0000
+			font-size: 12px
+			font-weight: 700
+	&__desk
+		position: relative
+		margin-bottom: 45px
+		.main__more
+			left: 0
+			top: 105%
+	&__desk-heading
+		color: #202021
+		font-size: 12px
+		font-weight: 700
+		line-height: 14px
+	&__desk-text
+		color: #202021
+		font-size: 12px
+		font-weight: 400
+		line-height: 14px
+	&__desk-bottom
+		+cf
+		margin: 8px 0 25px 0
+		a
+			display: inline-block
+			margin-right: 10px
+	&__desk-date
+		font-size: 10px
+		display: inline-block
+	&__tech
+		margin-top: 27px
+		&-tile
+			width: 200px
+			float: left
+			margin-right: 24px
+		&-heading
+			color: #000
+			font-size: 15px
+			font-weight: 700
+		&-text
+			color: #202021
+			font-size: 12px
+			font-weight: 400
+		&-bottom
+			a
+				display: inline-block
+				margin-right: 10px
+				text-decoration: none
+				color: #CF0000
+				font-size: 10px
+				font-weight: 400 
+				vertical-align: middle
+	&__popular
+		position: relative
+		a
+			text-decoration: none
+			color: #202021
+		.active
+			color: #CF0000
+
+	&__popular-title
+		@extend %title
+	&__popular-most
+		float: right
+	&__popular-tile
+		margin: 20px 0 20px 0
+	&__popular-date
+		color: #202021
+		font-size: 11px
+		font-style: italic
+	&__popular-text
+		color: #202021
+		font-size: 12px
+		font-weight: 700
+		font-style: normal
+		a
+			color: #CF0000
+	&__more-popular
+		@extend .main__more
+		top: 390px
+		left: 0
+	&__advertise2
+		position: relative
+		top: 60px
+	&__advertise3
+		position: relative
+		text-align: center
+		margin-top: 50px
+		min-height: 150px
+		padding: 25px 0
+
+.read__more
+	color: #CF0000
+	font-size: 10px
+	font-weight: 400
+	text-transform: uppercase
+	text-decoration: none
+
+.footer
+	position: relative
+	.wrapper
+		margin-bottom: 30px
+	&__nav
+		position: relative
+		width: 86%
+		margin: 0 auto 30px auto
+		li
+			display: inline-block
+			text-align: center
+			border-right: 1px solid black
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+				border-right: none
+		a
+			display: block
+			text-decoration: none
+			padding-right: 17px
+			color: black
+			color: #020305
+			font-size: 12px
+			font-weight: 400
+	&__copy
+		text-align: center
+		color: #020305
+		font-family: "Arial"
+		font-size: 12px
+		font-weight: 400
+		margin-bottom: 40px
+		line-height: 26px

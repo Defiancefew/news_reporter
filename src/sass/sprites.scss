@@ -1,0 +1,59 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-breaking {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -122px;
+  width: 108px;
+  height: 26px;
+}
+.icon-facebook {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -47px;
+  width: 24px;
+  height: 24px;
+}
+.icon-fb-like {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -149px;
+  width: 86px;
+  height: 26px;
+}
+.icon-google-like {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -26px;
+  width: 55px;
+  height: 20px;
+}
+.icon-plus {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px 0px;
+  width: 41px;
+  height: 7px;
+}
+.icon-rss {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -72px;
+  width: 24px;
+  height: 24px;
+}
+.icon-search {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -8px;
+  width: 13px;
+  height: 17px;
+}
+.icon-twitter {
+  background-image: url(../img/spritesheet.png);
+  background-position: 0px -97px;
+  width: 24px;
+  height: 24px;
+}
